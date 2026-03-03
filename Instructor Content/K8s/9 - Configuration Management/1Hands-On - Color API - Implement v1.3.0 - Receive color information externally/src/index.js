@@ -8,12 +8,15 @@ const getColor = () => {
   const filePath = process.env.COLOR_CONFIG_PATH;
 
   if (filePath) {
+    console.log("Color Config Path Found !");
+    
     try {
       const colorFromFile = fs.readFileSync(
         path.resolve(filePath),
         "utf8"
       );
-
+      console.log("color was changed");
+      
       color = colorFromFile.trim();
     } catch (error) {
       console.error(`Failed to read contents of ${filePath}`);
