@@ -81,17 +81,34 @@ Hands-on bash scripting: **TASKS.md** (requirements, no full code to copy), **HI
 | 29 | Leap Year (arithmetic, conditionals) | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v1.1-script-leap-year/linux_lab_script_leap_year.tar.gz \| tar -xz && cd linux_lab_script_leap_year && cat TASKS.md` |
 | 30 | Number Guessing Game | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v1.1-script-guessing-game/linux_lab_script_guessing_game.tar.gz \| tar -xz && cd linux_lab_script_guessing_game && cat TASKS.md` |
 
+#### Pipes and Redirection
+
+Two labs per operator — Lab 1 introduces the concept, Lab 2 applies it in realistic scenarios. **Release**: [v5.0-pipes-redirection](https://github.com/IITC-College/DevOps-Materials/releases/tag/v5.0-pipes-redirection)
+
+| # | Operator | Topic | Download |
+|---|----------|-------|----------|
+| 31 | `>` | Output Redirection — Your First Redirected Output | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_output_overwrite_1.tar.gz \| tar -xz && cd linux_lab_redir_output_overwrite_1 && cat start_here.txt` |
+| 32 | `>` | Output Redirection — Redirecting in Context | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_output_overwrite_2.tar.gz \| tar -xz && cd linux_lab_redir_output_overwrite_2 && cat start_here.txt` |
+| 33 | `>>` | Append Redirection — Building Files Over Time | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_output_append_1.tar.gz \| tar -xz && cd linux_lab_redir_output_append_1 && cat start_here.txt` |
+| 34 | `>>` | Append Redirection — Append in Practice | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_output_append_2.tar.gz \| tar -xz && cd linux_lab_redir_output_append_2 && cat start_here.txt` |
+| 35 | `<` | Input Redirection — Feeding Files to Commands | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_input_1.tar.gz \| tar -xz && cd linux_lab_redir_input_1 && cat start_here.txt` |
+| 36 | `<` | Input Redirection — Input Redirection in Practice | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_input_2.tar.gz \| tar -xz && cd linux_lab_redir_input_2 && cat start_here.txt` |
+| 37 | `<<` | Here-Document — Writing Multi-line Input Inline | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_heredoc_1.tar.gz \| tar -xz && cd linux_lab_redir_heredoc_1 && cat start_here.txt` |
+| 38 | `<<` | Here-Document — Heredoc in Real Scenarios | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_redir_heredoc_2.tar.gz \| tar -xz && cd linux_lab_redir_heredoc_2 && cat start_here.txt` |
+| 39 | `\|` | Pipes — Connecting Commands | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_pipes_1.tar.gz \| tar -xz && cd linux_lab_pipes_1 && cat start_here.txt` |
+| 40 | `\|` | Pipes — Pipes in Practice | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v5.0-pipes-redirection/linux_lab_pipes_2.tar.gz \| tar -xz && cd linux_lab_pipes_2 && cat start_here.txt` |
+
 #### Networking
 
 | # | Topic | Download |
 |---|--------|----------|
-| 31 | Network Adapter Debug (interfaces, IP, DNS, firewall) | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v4.0/linux_networking_lab1_adapter.tar.gz \| tar -xz && cd linux_networking_lab1_adapter && cat README.md` |
+| 41 | Network Adapter Debug (interfaces, IP, DNS, firewall) | `curl -L https://github.com/IITC-College/DevOps-Materials/releases/download/v4.0/linux_networking_lab1_adapter.tar.gz \| tar -xz && cd linux_networking_lab1_adapter && cat README.md` |
 
 #### Users and Groups
 
 | # | Topic | Download |
 |---|--------|----------|
-| 32 | Users and Groups Management | Path: `Linux/Users and Groups/linux_users_groups_management/` — In development; requires instructor setup (see lab README). |
+| 42 | Users and Groups Management | Path: `Linux/Users and Groups/linux_users_groups_management/` — In development; requires instructor setup (see lab README). |
 
 ---
 
@@ -273,6 +290,7 @@ Every lab must meet these criteria:
 - `v2.0` - Major content changes
 
 ### Recent Releases
+- **v5.0-pipes-redirection** — 10 new Linux labs: `>`, `>>`, `<`, `<<`, `|` (Pipes & Redirection). [Release](https://github.com/IITC-College/DevOps-Materials/releases/tag/v5.0-pipes-redirection)
 - **v1.1-shell-scripting-hardened** — Shell Scripting labs (19–30) hardened: requirements-based tasks, solutions in `HINTS.md`. [Release](https://github.com/IITC-College/DevOps-Materials/releases/tag/v1.1-shell-scripting-hardened)
 
 ### Release Process
@@ -324,9 +342,10 @@ Every lab must meet these criteria:
 | Linux           | Permissions           | 6    | 200+        | ~80KB      |
 | Linux           | Processes & Services  | 6    | 150+        | ~70KB      |
 | Linux           | Shell Scripting       | 13   | 140+        | ~50KB      |
+| Linux           | Pipes & Redirection   | 10   | 150+        | ~160KB     |
 | Linux           | Networking            | 1    | 50+         | ~20KB      |
 | Linux           | Users & Groups        | 1    | 30+         | ~10KB      |
-| **Total Linux** |                       | **32** | **720+**    | **~280KB** |
+| **Total Linux** |                       | **42** | **870+**  | **~440KB** |
 | Docker          | Container Basics      | 1    | 10+         | ~75KB      |
 | Python          | Python Basics         | 28   | 85+         | ~25KB      |
 | K8s             | -                     | -    | -           | -          |
@@ -347,6 +366,6 @@ Course materials © 2026 IITC College. For educational use only.
 
 ---
 
-**Last Updated**: 2026-02-19  
+**Last Updated**: 2026-03-04
 **Repository**: IITC-College/DevOps-Materials  
 **Maintainer**: Course Instructor
