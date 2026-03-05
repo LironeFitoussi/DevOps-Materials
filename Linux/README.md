@@ -13,6 +13,19 @@ Hands-on Linux fundamentals for DevOps. Topics progress from basic navigation to
 | [Networking](Networking/) | Network adapters, basic connectivity |
 | [Shell Scripting](Shell%20Scripting/) | Bash scripting: variables, conditions, loops, functions |
 | [Pipes and Redirection](Pipes%20and%20Redirection/) | `>`, `>>`, `<`, `<<`, `\|` — redirecting and piping data |
+| [Real-World Scenarios](real-world-scenarios/) | Comprehensive scenario labs combining multiple topics |
+
+---
+
+## Real-World Scenario Labs — Download
+
+**Release:** [v1.0-scenario](https://github.com/IITC-College/DevOps-Materials/releases/tag/v1.0-scenario)
+
+```bash
+# Scenario: Managing a Shared Project Server — Users, groups, permissions, pipes & redirection
+curl -L -o lab.tar.gz https://github.com/IITC-College/DevOps-Materials/releases/download/v1.0-scenario/linux_scenario_shared_server.tar.gz
+tar -xzf lab.tar.gz && cd linux_scenario_shared_server
+```
 
 ---
 
