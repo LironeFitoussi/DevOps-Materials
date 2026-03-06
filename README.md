@@ -112,11 +112,11 @@ Two labs per operator — Lab 1 introduces the concept, Lab 2 applies it in real
 
 #### Real-World Scenarios
 
-Comprehensive scenario labs combining multiple topics into authentic DevOps workflows. **Release**: [v1.0-scenario](https://github.com/IITC-College/DevOps-Materials/releases/tag/v1.0-scenario)
+Comprehensive scenario labs combining multiple topics into authentic DevOps workflows. **Release**: [v1.1-scenario](https://github.com/IITC-College/DevOps-Materials/releases/tag/v1.1-scenario)
 
 | # | Scenario | Topics | Download |
 |---|----------|--------|----------|
-| 43 | Managing a Shared Project Server | Users, Groups, Permissions, Pipes, Redirection | `curl -L -o lab.tar.gz https://github.com/IITC-College/DevOps-Materials/releases/download/v1.0-scenario/linux_scenario_shared_server.tar.gz && tar -xzf lab.tar.gz && cd linux_scenario_shared_server && cat start_here.txt` |
+| 43 | Managing a Shared Project Server | Users, Groups, Permissions, Pipes, Redirection | `curl -L -o lab.tar.gz https://github.com/IITC-College/DevOps-Materials/releases/download/v1.1-scenario/linux_scenario_shared_server.tar.gz && tar -xzf lab.tar.gz && cd linux_scenario_shared_server && cat start_here.txt` |
 
 ---
 

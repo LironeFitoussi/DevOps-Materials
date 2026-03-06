@@ -7,7 +7,7 @@ Welcome to your first real-world DevOps scenario lab!
 ### Method 1: Download with curl (Recommended)
 
 ```bash
-curl -L -o lab.tar.gz https://github.com/IITC-College/DevOps-Materials/releases/download/v1.0-scenario/linux_scenario_shared_server.tar.gz
+curl -L -o lab.tar.gz https://github.com/IITC-College/DevOps-Materials/releases/download/v1.1-scenario/linux_scenario_shared_server.tar.gz
 tar -xzf lab.tar.gz
 cd linux_scenario_shared_server
 ```
@@ -37,6 +37,19 @@ This script will:
 - Set initial ownership to `root:root`
 
 **Note**: The script does NOT create users or groups. Students create them as part of the exercises.
+
+**Before Level 3**: After students complete Level 1 and Level 2, run the permissions bug script:
+
+```bash
+sudo ./set_level_permissions.sh
+```
+
+This introduces the Level 3 challenge bug:
+- Creates a dummy group `it`
+- Moves `dev2` into `it`, removes from `devteam`
+- Sets `/opt/project` ownership to `root:it`
+
+Students must diagnose why `dev2` can no longer access the project and fix it.
 
 ### Cleanup After Lab
 
@@ -172,4 +185,4 @@ This lab simulates a real DevOps task. Take your time, think through each step, 
 
 **Linux Course**
 **Scenario Lab: Managing a Shared Project Server**
-**Version**: v1.0
+**Version**: v1.1
