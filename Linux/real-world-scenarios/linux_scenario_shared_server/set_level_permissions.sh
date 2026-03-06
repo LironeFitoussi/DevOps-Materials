@@ -70,17 +70,10 @@ echo "  - Added dev2 to group: it"
 gpasswd -d dev2 devteam
 echo "  - Removed dev2 from group: devteam"
 
-# 4. Set /opt/project group ownership to "it" instead of "devteam"
-chown -R root:it "$PROJECT_DIR"
-chmod -R 770 "$PROJECT_DIR"
-find "$PROJECT_DIR" -type f -exec chmod 660 {} \;
-chmod +x "$PROJECT_DIR/scripts/"*.sh
-chmod +x "$PROJECT_DIR/src/"*.py
-
 echo ""
 echo -e "${GREEN}Broken state applied:${NC}"
 echo "  - Group 'it' created"
 echo "  - dev2 is in group: it (NOT devteam)"
-echo "  - /opt/project is owned by root:it (NOT root:devteam)"
+echo "  - dev2 removed from devteam"
 echo ""
-echo -e "${YELLOW}Students must diagnose why dev2 cannot access /opt/project and fix it.${NC}"
+echo -e "${YELLOW}Students must diagnose why dev2 cannot collaborate with the team and fix it.${NC}"

@@ -47,9 +47,8 @@ sudo ./set_level_permissions.sh
 This introduces the Level 3 challenge bug:
 - Creates a dummy group `it`
 - Moves `dev2` into `it`, removes from `devteam`
-- Sets `/opt/project` ownership to `root:it`
 
-Students must diagnose why `dev2` can no longer access the project and fix it.
+Students must diagnose why `dev2` can no longer collaborate with the team and fix it.
 
 ### Cleanup After Lab
 

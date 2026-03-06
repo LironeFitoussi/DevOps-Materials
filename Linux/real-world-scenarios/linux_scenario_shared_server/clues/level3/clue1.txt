@@ -9,8 +9,8 @@ the permission bug they will need to diagnose and fix:
 
     sudo ./set_level_permissions.sh
 
-This script creates a dummy group "it", moves dev2 into it, removes dev2
-from devteam, and sets /opt/project ownership to root:it.
+This script creates a dummy group "it", moves dev2 into it, and removes
+dev2 from devteam.
 ************************
 
 STORY:
