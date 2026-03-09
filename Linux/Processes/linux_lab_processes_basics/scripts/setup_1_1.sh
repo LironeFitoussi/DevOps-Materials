@@ -1,4 +1,0 @@
-#!/bin/bash
-# Level 1, Clue 1: No setup needed - students use existing system processes.
-echo "ℹ No setup needed for Level 1, Clue 1 - you'll use existing system processes."
-exit 0
