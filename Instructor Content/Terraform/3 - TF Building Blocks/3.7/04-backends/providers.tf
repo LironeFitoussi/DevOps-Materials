@@ -14,9 +14,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "terraform-course-lironefit-remote-backend"
-    key    = "state.tfstate"
-    region = "eu-west-1"
+
   }
 }
 
