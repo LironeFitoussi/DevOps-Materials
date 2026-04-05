@@ -1,4 +1,3 @@
-# outputs.tf
 output "ubuntu_ami_data_eu" {
   value = data.aws_ami.ubuntu.id
 }
@@ -18,3 +17,15 @@ output "ubuntu_ami_data_eu" {
 # output "ubuntu_ami_data_us" {
 #   value = data.aws_ami.ubuntu_us.id
 # }
+
+# output "prod_vpc_id" {
+#   value = data.aws_vpc.prod_vpc.id
+# }
+
+output "azs" {
+  value = data.aws_availability_zones.available
+}
+
+output "az_names" {
+  value = data.aws_availability_zones.available.names
+}

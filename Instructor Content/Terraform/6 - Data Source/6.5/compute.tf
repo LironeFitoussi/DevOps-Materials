@@ -14,23 +14,6 @@ data "aws_ami" "ubuntu" {
   }
 }
 
-# data "aws_ami" "ubuntu_us" {
-#   provider    = aws.us_east
-#   most_recent = true
-#   owners      = ["099720109477"]
-
-#   filter {
-#     name   = "name"
-#     values = ["ubuntu/images/hvm-ssd/ubuntu-*-22.04-amd64-server-*"]
-#   }
-
-#   filter {
-#     name   = "virtualization-type"
-#     values = ["hvm"]
-#   }
-# }
-
-
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
