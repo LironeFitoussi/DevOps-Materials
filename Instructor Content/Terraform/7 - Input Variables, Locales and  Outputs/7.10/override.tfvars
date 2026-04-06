@@ -1,0 +1,1 @@
+ec2_instance_type = "t2.micro" # use t3.micro if t2.micro is unavailable in your region
