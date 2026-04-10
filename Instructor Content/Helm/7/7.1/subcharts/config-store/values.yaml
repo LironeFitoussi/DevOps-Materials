@@ -109,7 +109,8 @@ httpRoute:
   #     - name: version
   #       value: v2
 
-resources: 
+resources:
+  # {} (default) +10m CPU, 256Mi memory limit + 3s timeout for liveness probe and max of ~4 minutes total duration. If the container starts more than this time it will be killed by Kubernetes otherwise we'll wait until its ready to serve traffic
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
