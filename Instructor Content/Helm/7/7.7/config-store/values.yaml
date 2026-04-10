@@ -159,22 +159,15 @@ tolerations: []
 
 affinity: {}
 
-
-# subchart values
-
-# PostgreSQL subchart values
 postgresql:
-    enabled: false
-#   fullNameOverride: "my-new-name"
-
-# demo-subchart values
-demo-subchart:
-  customValue: "hello from config-store"
-
-# Global values
-global:
-  defaultStorageClass: "my-custom-storage-class"
-
-tags:
-  database: true
-  performance: true
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/postgresql
+  auth:
+    usePasswordFiles: false
+    username: config_store_user
+    database: config_store_db
+    existingSecret: postgres-creds
+    secretKeys:
+      userPasswordKey: password
+  fullnameOverride: postgresql-db
