@@ -43,14 +43,22 @@ data "aws_iam_policy" "managed_policies" {
   arn = "arn:aws:iam::aws:policy/${each.value}"
 }
 
+
+/*
+
+*/
 data "aws_iam_policy_document" "assume_role_policy" {
+  for_each = toset(keys(local.role_policies))
+
   statement {
     actions = ["sts:AssumeRole"]
 
     principals {
       type = "AWS"
-      #!   Currently an empty list will fail with "Invalid principal in policy: \"\""
-      identifiers = []
+      identifiers = [
+        for user in keys(aws_iam_user.users) : aws_iam_user.users[user].arn
+        if contains(local.users_map[user], each.value)
+      ]
     }
   }
 }
@@ -59,7 +67,7 @@ resource "aws_iam_role" "roles" {
   for_each = toset(keys(local.role_policies))
 
   name               = each.key
-  assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
+  assume_role_policy = data.aws_iam_policy_document.assume_role_policy[each.value].json
 }
 
 resource "aws_iam_role_policy_attachment" "role_policy_attachments" {
@@ -70,4 +78,8 @@ resource "aws_iam_role_policy_attachment" "role_policy_attachments" {
   policy_arn = data.aws_iam_policy.managed_policies[
     local.role_policies_list[count.index].policy // e.g. "ReadOnlyAccess"
   ].arn                                          // arn:aws:iam::aws:policy/ReadOnlyAccess
+}
+
+output "data_thing" {
+  value = data.aws_iam_policy_document.assume_role_policy
 }
