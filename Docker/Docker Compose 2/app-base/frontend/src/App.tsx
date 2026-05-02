@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react';
 
+interface Todo {
+  id: number;
+  text: string;
+}
+
 export default function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [text, setText] = useState('');
 
   useEffect(() => {
     fetch('/api/todos')
       .then(r => r.json())
-      .then(setTodos)
+      .then((data: Todo[]) => setTodos(data))
       .catch(() => setTodos([]));
   }, []);
 
-  async function addTodo(e) {
+  async function addTodo(e: React.FormEvent) {
     e.preventDefault();
     if (!text.trim()) return;
     const res = await fetch('/api/todos', {
@@ -19,12 +24,12 @@ export default function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text })
     });
-    const todo = await res.json();
+    const todo: Todo = await res.json();
     setTodos([...todos, todo]);
     setText('');
   }
 
-  async function removeTodo(id) {
+  async function removeTodo(id: number) {
     await fetch(`/api/todos/${id}`, { method: 'DELETE' });
     setTodos(todos.filter(t => t.id !== id));
   }
